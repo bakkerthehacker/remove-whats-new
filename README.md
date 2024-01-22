@@ -18,7 +18,7 @@ Script to patch steam css files removing the What's New section
 
 # other similar scripts
 
-- [ChunkPatcher](https://www.donationcoder.com/forum/index.php?topic=53861.msg453012) (windows only)
+- [ChunkPatcher](https://github.com/zero318/BegoneWhatsNew/issues/10#issuecomment-1859056116) (windows only)
 - [SteamWhatsNewYeeter](https://github.com/MateusAuri/SteamWhatsNewYeeter) (windows only)
 - [BegoneWhatsNew](https://github.com/zero318/BegoneWhatsNew) OG theme repo
 - [Kopert Instructions](https://old.reddit.com/r/Steam/comments/10r753g/whats_new_section_came_back/j6v0ye5/) Only works correctly if your editor leaves CRLF alone
