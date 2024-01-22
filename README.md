@@ -10,3 +10,19 @@ Script to patch steam css files removing the What's New section
 - Also removes What's New section from Big Picture mode
 - Flexible to any changes in css file names or css class names (random chars that change sometimes)
 - Preserves CRLF line endings on non-windows OSes to ensure the same file size
+
+# non-features
+
+- Doesn't open or close steam for you
+- Doesn't detect any changes or look for any updates
+
+# other similar scripts
+
+- [ChunkPatcher](https://www.donationcoder.com/forum/index.php?topic=53861.msg453012) (windows only)
+- [SteamWhatsNewYeeter](https://github.com/MateusAuri/SteamWhatsNewYeeter) (windows only)
+- [BegoneWhatsNew](https://github.com/zero318/BegoneWhatsNew) OG theme repo
+
+# todo
+
+- test on steam deck
+- test on MacOS/Windows instead of guessing path globs
