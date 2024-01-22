@@ -6,8 +6,8 @@ import glob
 import re
 
 classes_to_replace = [
-  'libraryhome_UpdatesContainer_17uEB',
-  'gamepadhomewhatsnew_LibraryHomeWhatsNew_rvYRf'
+  'libraryhome_UpdatesContainer_.....',
+  'gamepadhomewhatsnew_LibraryHomeWhatsNew_.....'
 ]
 css_path_globs = [
   # Linux
