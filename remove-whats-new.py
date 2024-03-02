@@ -21,6 +21,7 @@ new_style = 'display: none !important;'
 
 
 def replace_style(match):
+  print()
   print('found class: ' + match['class_name'])
   print('with style:')
   print(match['class_style'])
@@ -29,6 +30,9 @@ def replace_style(match):
 
   if padding_length < 0:
     raise Exception('cannot replace existing style with longer style')
+
+  print('replacing with style:')
+  print(new_style)
 
   return match['class_name'] + '{' + new_style + (' ' * padding_length) + '}'
 
@@ -47,8 +51,8 @@ def main():
     raise Exception('found too many css files:\n' + '\n'.join(css_globs))
 
   for found_css in css_globs:
-
-    print('found ' + found_css)
+    print()
+    print('found css file ' + found_css)
 
     read_file = open(found_css, newline='')
     css_string = read_file.read()
@@ -56,7 +60,7 @@ def main():
 
     for class_name in classes_to_replace:
       print()
-      print('hiding ' + class_name)
+      print('looking for ' + class_name)
 
       css_string = re.sub(
         '(?P<class_name>' + class_name + ')' + r'\{(?P<class_style>[^}]*?)\}',
