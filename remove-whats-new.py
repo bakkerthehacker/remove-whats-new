@@ -43,30 +43,31 @@ def main():
   if len(css_globs) == 0:
     raise Exception('did not find any css file')
 
-  if not len(css_globs) == 1:
+  if len(css_globs) > 5:
     raise Exception('found too many css files:\n' + '\n'.join(css_globs))
 
-  found_css = css_globs[0]
-  print('found ' + found_css)
+  for found_css in css_globs:
 
-  read_file = open(found_css, newline='')
-  css_string = read_file.read()
-  read_file.close()
+    print('found ' + found_css)
 
-  for class_name in classes_to_replace:
-    print()
-    print('hiding ' + class_name)
+    read_file = open(found_css, newline='')
+    css_string = read_file.read()
+    read_file.close()
 
-    css_string = re.sub(
-      '(?P<class_name>' + class_name + ')' + r'\{(?P<class_style>[^}]*?)\}',
-      replace_style,
-      css_string,
-      count=1,
-    )
+    for class_name in classes_to_replace:
+      print()
+      print('hiding ' + class_name)
 
-  write_file = open(found_css, 'w', newline='')
-  write_file.write(css_string)
-  write_file.close()
+      css_string = re.sub(
+        '(?P<class_name>' + class_name + ')' + r'\{(?P<class_style>[^}]*?)\}',
+        replace_style,
+        css_string,
+        count=1,
+      )
+
+    write_file = open(found_css, 'w', newline='')
+    write_file.write(css_string)
+    write_file.close()
 
 
 if __name__ == '__main__':
