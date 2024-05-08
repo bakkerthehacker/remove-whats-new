@@ -7,7 +7,11 @@ import re
 
 classes_to_replace = [
   'libraryhome_UpdatesContainer_.....',
-  'gamepadhomewhatsnew_LibraryHomeWhatsNew_.....'
+  'gamepadhomewhatsnew_LibraryHomeWhatsNew_.....',
+
+  # these start with the last few chars from the previous css classes
+  '._17uEBe5Ri8TMsnfELvs8-N',
+  '.rvYRfhjWoi57GShuRcAwP',
 ]
 css_path_globs = [
   # Linux
