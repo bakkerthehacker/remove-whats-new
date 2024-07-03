@@ -19,7 +19,7 @@ Script to patch steam css files removing the What's New section
 # other similar scripts
 
 - [ChunkPatcher](https://github.com/zero318/BegoneWhatsNew/issues/10#issuecomment-1859056116) (windows only)
-- ~~[SteamWhatsNewYeeter](https://github.com/MateusAuri/SteamWhatsNewYeeter) (windows only)~~ No longer working
+- [SteamWhatsNewYeeter](https://github.com/MateusAuri/SteamWhatsNewYeeter) (windows only, bash also available in fork)
 - ~~[BegoneWhatsNew](https://github.com/zero318/BegoneWhatsNew) OG theme repo~~ No longer working
 - ~~[Kopert Instructions](https://old.reddit.com/r/Steam/comments/10r753g/whats_new_section_came_back/j6v0ye5/)~~ No longer working
 - [xtcrefugee Instructions](https://old.reddit.com/r/Steam/comments/1cmqsbc/removing_whats_new_add_shelf_and_left_column_in/)
