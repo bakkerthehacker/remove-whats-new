@@ -6,12 +6,12 @@ import glob
 import re
 
 classes_to_replace = [
-  'libraryhome_UpdatesContainer_.....',
-  'gamepadhomewhatsnew_LibraryHomeWhatsNew_.....',
+  b'libraryhome_UpdatesContainer_.....',
+  b'gamepadhomewhatsnew_LibraryHomeWhatsNew_.....',
 
   # these start with the last few chars from the previous css classes
-  '._17uEBe5Ri8TMsnfELvs8-N',
-  '.rvYRfhjWoi57GShuRcAwP',
+  b'._17uEBe5Ri8TMsnfELvs8-N',
+  b'.rvYRfhjWoi57GShuRcAwP',
 ]
 css_path_globs = [
   # Linux
@@ -21,12 +21,12 @@ css_path_globs = [
   # Windows
   r'C:\Program Files (x86)\Steam\steamui\css\chunk*.css',
 ]
-new_style = 'display: none !important;'
+new_style = b'display: none !important;'
 
 
 def replace_style(match):
   print()
-  print('found class: ' + match['class_name'])
+  print(b'found class: ' + match['class_name'])
   print('with style:')
   print(match['class_style'])
 
@@ -38,7 +38,7 @@ def replace_style(match):
   print('replacing with style:')
   print(new_style)
 
-  return match['class_name'] + '{' + new_style + (' ' * padding_length) + '}'
+  return match['class_name'] + b'{' + new_style + (b' ' * padding_length) + b'}'
 
 
 def main():
@@ -58,26 +58,25 @@ def main():
     print()
     print('found css file ' + found_css)
 
-    read_file = open(found_css, newline='')
+    read_file = open(found_css, 'rb')
     css_string = read_file.read()
     read_file.close()
 
     for class_name in classes_to_replace:
       print()
-      print('looking for ' + class_name)
+      print(b'looking for ' + class_name)
 
       css_string = re.sub(
-        '(?P<class_name>' + class_name + ')' + r'\{(?P<class_style>[^}]*?)\}',
+        b'(?P<class_name>' + class_name + b')' + br'\{(?P<class_style>[^}]*?)\}',
         replace_style,
         css_string,
         count=1,
       )
 
-    write_file = open(found_css, 'w', newline='')
+    write_file = open(found_css, 'wb')
     write_file.write(css_string)
     write_file.close()
 
 
 if __name__ == '__main__':
   main()
-
