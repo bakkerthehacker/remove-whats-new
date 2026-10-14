@@ -16,10 +16,13 @@ classes_to_replace = [
 css_path_globs = [
   # Linux
   '/home/*/.steam/steam/steamui/css/chunk*.css',
+  '/home/*/.steam/steam/steamui/css/sp.css',
   # MacOS
   '/Users/*/Library/Application Support/Steam/steamui/css/chunk*.css',
+  '/Users/*/Library/Application Support/Steam/steamui/css/sp.css',
   # Windows
   r'C:\Program Files (x86)\Steam\steamui\css\chunk*.css',
+  r'C:\Program Files (x86)\Steam\steamui\css\sp.css',
 ]
 new_style = b'display: none !important;'
 
